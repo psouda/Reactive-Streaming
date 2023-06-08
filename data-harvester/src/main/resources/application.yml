@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: data-harvester
+
+server:
+  port: 8081
+
+streaming:
+  baseUrl: ${STREAMING_BASE_URL:http://localhost:8080}
+  limitationInSeconds: 20
+  paths:
+    netflix: /netflix
+    sytazon: /sytazon
+    sysney: /sysney
+  auth:
+    username: sampleuser
+    password: 4p9g-Dv7T-u8fe-iz6y-SRW2
