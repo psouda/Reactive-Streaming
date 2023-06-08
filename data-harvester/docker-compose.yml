@@ -1,0 +1,15 @@
+version: '3'
+services:
+  video-stream-server:
+    image: sample1docker/video-stream-server:latest
+    ports:
+      - 8080:8080
+
+  my-application:
+    build: .
+    ports:
+      - 8081:8081
+    environment:
+      - STREAMING_BASE_URL=http://video-stream-server:8080
+    depends_on:
+      - video-stream-server
