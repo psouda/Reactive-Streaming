@@ -1,4 +1,4 @@
-package io.sytac.dataharvester.model;
+package io.sample.dataharvester.model;
 
 import lombok.Data;
 
